@@ -1,0 +1,53 @@
+
+.aboveFold {
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, .2)), 
+        url(../img/mountains.jpg);
+    
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    text-align: center;
+
+    .rocketTitle {
+        width: 35rem;
+        height: auto;
+        margin-top: 10rem;
+    }
+    & h1 {
+        font-weight: 400;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        padding: 0 20rem;
+        padding-top: 15rem;
+        padding-bottom: 5rem;
+        color: $color-grey-dark-2;
+        font-size: 7rem;
+        // margin: 0rem 20vh;
+    }
+    .btn:hover {
+        transform: translateY(3px);
+    }
+    .btn:active {
+        transform: translateY(-1px);
+    }
+
+    .logo {
+        position: absolute;
+        top: 9%;
+        left: 88%;
+    } 
+    .rocketLogo {
+        height: 10rem;
+        width: auto;
+        // position: relative;
+        // bottom: 35rem;
+        // ^ this is to have it centered
+        // margin: 7.5rem 7rem;
+    }   
+}
