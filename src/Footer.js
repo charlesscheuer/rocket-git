@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import rocketLogo from '../src/img/rocket-02.png';
 const email = 'charlesfscheuer@gmail.com';
 

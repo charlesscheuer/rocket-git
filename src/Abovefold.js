@@ -6,7 +6,7 @@ const Abovefold = ({ctaRouteChange}) => {
     return (
       <div className="aboveFold">
       <img className="rocketTitle" src={rocketTitle} alt="rocket apparel"/>
-      <h1>Cliche copywriting goes right here</h1>
+      <h1>Cliche copywritings goes right here</h1>
       <div className="logo">
       <img className="rocketLogo" src={rocketLogo} alt="rocket logo"/>
       </div>

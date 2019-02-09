@@ -33,6 +33,12 @@
     & h1 {
         font-size: 5rem;
     }
+    &_img {
+        width: 20rem;
+        height: auto;
+        display: inline-block;
+        padding: 2rem;
+    }
     .form {
         &__group {
             margin-top: 2rem;
