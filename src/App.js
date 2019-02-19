@@ -5,7 +5,6 @@ import NavMenu from './NavMenu';
 import NavToggle from './NavToggle';
 import Footer from './Footer';
 
-
 class App extends Component {
 
   constructor() {
@@ -33,12 +32,12 @@ class App extends Component {
 
   render() {
     return (
-      <body className="App">
+      <body className="app">
       {this.state.menu ? 
         <NavMenu onRouteChange={this.onRouteChange} /> : 
       <Sourcepage route={this.state.route} ctaRouteChange={this.ctaRouteChange}/>
       }
-      <NavToggle click={this.menuToggleHandler}/>
+      <NavToggle click={this.menuToggleHandler} checked={this.state.menu}/>
       {!this.state.menu ? <Footer ctaRouteChange={this.ctaRouteChange}/> : null }
   </body>
     );
