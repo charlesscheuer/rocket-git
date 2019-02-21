@@ -6,8 +6,8 @@ export default class Mountain extends Component {
   render() {
     return (
       <div className="mountain">
-        <img src={madeForThe} className="mountain__head"/>
-        <img src={mountainIcon} className="mountain__icon"/>
+        <img src={madeForThe} alt="Page" className="mountain__head"/>
+        <img src={mountainIcon} alt="icon of mountain" className="mountain__icon"/>
       </div>
     )
   }

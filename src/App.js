@@ -11,7 +11,8 @@ class App extends Component {
     super();
     this.state = {
       menu: false,
-      route: 'Abovefold'
+      route: 'Abovefold',
+      ctrSub: ''
     }
   }
 
@@ -32,14 +33,14 @@ class App extends Component {
 
   render() {
     return (
-      <body className="app">
+      <div className="app">
       {this.state.menu ? 
         <NavMenu onRouteChange={this.onRouteChange} /> : 
       <Sourcepage route={this.state.route} ctaRouteChange={this.ctaRouteChange}/>
       }
       <NavToggle click={this.menuToggleHandler} checked={this.state.menu}/>
       {!this.state.menu ? <Footer ctaRouteChange={this.ctaRouteChange}/> : null }
-  </body>
+  </div>
     );
   }
 }

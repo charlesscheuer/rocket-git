@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 
 class NavToggle extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
+  // constructor(props) {
+  //   super(props);
+  // }
+  // no need to call a constructor because we have these props and can call them with this.props
   isChecked = () => this.props.checked ? null : "checked";
 
   render (){
@@ -13,7 +13,7 @@ class NavToggle extends Component {
       <div className="options">
         <div className="menu cross menu--1">
         <label>
-    <input type="checkbox" onClick={this.props.click} checked={Boolean(this.props.checked)}/>
+    <input type="checkbox" onClick={this.props.click} checked={Boolean(this.props.checked)} readOnly/>
     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       <circle cx="50" cy="50" r="30" style={{fill: '#177330'}}/>
       <path className="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />

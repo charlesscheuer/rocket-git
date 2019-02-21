@@ -6,8 +6,8 @@ export default class Ourstory extends Component {
   render() {
     return (
       <div className="ourStory" >
-        <img src={ourStory} className="ourStory__head"/>
-        <img src={ourStoryBook} className="ourStory__icon"/>
+        <img src={ourStory} alt="Logo name says rocket apparel" className="ourStory__head"/>
+        <img src={ourStoryBook} alt="Logo" className="ourStory__icon"/>
       </div>
     )
   }

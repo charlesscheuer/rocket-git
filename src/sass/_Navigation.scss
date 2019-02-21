@@ -30,24 +30,42 @@
     }
 
     &__link {
-        &:link,
-        &:visited {
             font-size: 5rem;
             font-family: $font-display;
             font-weight: 400;
             color: $color-grey-dark-2;
             text-decoration: none;
             text-transform: uppercase;
-            padding: 1rem 2rem;
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-secondary 50%);
             color: $color-secondary;
             background-size: 300%;
             transition: all .8s cubic-bezier(.645, .045, .355, 1);
+        & a {
+            font-size: 5rem;
+            font-family: $font-display;
+            font-weight: 400;
+            color: $color-grey-dark-2;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-secondary 50%);
+            color: $color-secondary;
+            background-size: 300%;
+            transition: all .8s cubic-bezier(.645, .045, .355, 1);
+            &:hover, &:active {
+                padding: 1rem 2rem;
+                text-decoration: none;
+                background-position: 100%;
+                color: $color-grey-dark-2;
+                cursor: pointer;
+            }
         }
         &:hover,
         &:active {
+            padding: 1rem 2rem;
+            text-decoration: none;
             background-position: 100%;
             color: $color-grey-dark-2;
+            cursor: pointer;
         }
     }
 }
