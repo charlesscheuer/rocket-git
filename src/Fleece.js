@@ -10,10 +10,15 @@ export default class Fleece extends Component {
   render() {
     return (
       <div className="rocketFleece">
-        <img src={rocketFleece} className="rocketFleece__head" alt="header label"/>
-        <img src={pullover} className="rocketFleece__icon" alt="header icon"/>
+      <div className="top_centered">
+      <img src={rocketFleece} className="rocketFleece__head" alt="header label"/>
+      </div>
+      <div className="top_centered">
+      <img src={pullover} className="rocketFleece__icon" alt="header icon"/>
+      </div>  
+          
         <div className="productPage">
-        <h1>Rocket Apparel Fleece</h1> 
+        {/*<h1>Rocket Apparel Fleece</h1> */}
         <ProductPage/>
         </div>
         <Mountain />

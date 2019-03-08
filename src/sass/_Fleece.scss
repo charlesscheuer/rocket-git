@@ -1,30 +1,35 @@
 .rocketFleece {
     background-color: $color-grey-dark-2;
     padding-bottom: 4rem;
+    text-align: center;
+    .top_centered {
+        text-align: center;
+    }
     &__head {
         width: 30rem;
         height: auto;
-        margin-left: 50vw;
-        transform: translateX(-50%);
+        display: inline-block;
         padding-top: 4rem;
         padding-bottom: 2rem;
+        @media screen and (max-width: 541px) {
+            padding-top: 15rem;
+        }
     }
     &__icon {
         height: 5rem;
+        display: inline-block;
         width: auto;
-        margin-left: 50vw;
-        transform: translateX(-50%);
-        margin-bottom: 10rem;
+        margin-bottom: 0;
     }
 }
 
 .productPage {
     margin-left: 50vw;
     transform: translateX(-50%);
-    background-color: $color-secondary;
+    // background-color: $color-secondary;
     padding: 5rem 5rem 5rem;
     border-radius: 1rem;
-    color: $color-grey-dark-2;
+    color: $color-secondary;
     font-family: $font-display;
     width: 90vw;
     text-align: center;
@@ -36,9 +41,12 @@
         width: 75%;
         height: auto;
         display: inline-block;
+        @media screen and (max-width: $bp-medium) {
+            width: 90%;
+        }
     }
     .price {
-        font-size: 2rem;
+        font-size: 3rem;
         padding-top: 2rem;
         @media screen and (max-width: $bp-medium) {
             font-size: 1.6rem;
@@ -47,8 +55,11 @@
         &_desc{
             font-size: 2rem;
             font-weight: 400;
+            text-align: left;
             @media screen and (max-width: $bp-medium) {
                 font-size: 1.6rem;
+                text-align: center;
+                margin-bottom: 1.5rem;
             }
         }
     }
@@ -65,8 +76,8 @@
     }
     .purchase {
         // this is the buy now button
-        background-color: $color-grey-dark-2;
-        color: $color-secondary;
+        background-color: #7f7566;
+        color: $color-grey-dark-2;
         border: none;
         border-radius: .5rem;
         font-family: $font-display;
@@ -82,6 +93,7 @@
         &:hover {
             background-color: rgba(0,0,0,.5);
             color: $color-grey-dark-2;
+            background-color: $color-secondary;
             box-shadow: 0 10px 20px rgba(0,0,0,.2);
         }
         &:active {
@@ -119,7 +131,7 @@
         }
 
         &::-webkit-input-placeholder {
-            color: $color-grey-dark-2;
+            color: #7f7566;
         }
     }
 
@@ -130,6 +142,8 @@
         margin-top: .7rem;
         display: block;
         transition: all .3s;
+        position: relative;
+        left: 2rem;
         @media screen and (max-width: 400px) {
             width: 8rem;
         }
@@ -168,7 +182,7 @@
     &_right {
         width: 40%;
         @media screen and (max-width: $bp-medium) {
-            width: 90%;
+            width: 100%;
             font-size: 1.6rem;
         }
     }

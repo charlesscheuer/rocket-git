@@ -39,6 +39,16 @@
             color: $color-secondary;
             background-size: 300%;
             transition: all .8s cubic-bezier(.645, .045, .355, 1);
+            @media screen and (max-width: $bp-medium) {
+                font-size: 4rem;
+            }
+            @media screen and (max-width: $bp-small) {
+                font-size: 3rem;
+            }
+            @media screen and (max-width: 433px) {
+                font-size: 2.5rem;
+                margin-bottom: 4rem;
+            }
         & a {
             font-size: 5rem;
             font-family: $font-display;
@@ -50,6 +60,15 @@
             color: $color-secondary;
             background-size: 300%;
             transition: all .8s cubic-bezier(.645, .045, .355, 1);
+            @media screen and (max-width: $bp-medium) {
+                font-size: 4rem;
+            }
+            @media screen and (max-width: $bp-small) {
+                font-size: 3rem;
+            }
+            @media screen and (max-width: 433px) {
+                font-size: 2.5rem;
+            }
             &:hover, &:active {
                 padding: 1rem 2rem;
                 text-decoration: none;

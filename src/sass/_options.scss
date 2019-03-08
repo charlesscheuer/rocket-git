@@ -13,9 +13,17 @@ input {
     width: 15rem;
     max-width: 150px;
     max-height: 150px;
+    @media screen and (max-width: 1041px) {
+      top: 1rem;
+      left: 1rem;
+    }
+    @media screen and (max-width: 400px) {
+      top: 0;
+      left: 0;
+    }
   }
   
-  @media (min-aspect-ratio: 1/1) {
+  @media screen and (min-aspect-ratio: 1/1) {
     label {
       width: 50vh;
       height: 50vh;
