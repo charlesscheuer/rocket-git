@@ -4,7 +4,8 @@ export default class FormCollect extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      ctrSub: ''
+      ctrSub: '',
+      submitted: false
     }
   }
 
@@ -14,13 +15,15 @@ export default class FormCollect extends Component {
 
   onSubmitEmail = () => {
     console.log(this.state.ctrSub)
+    this.setState({submitted: true})
     // in the future this will submit the value to the database
   }
 
   render() {
     return (
         <div className="ctr">
-        <p className="outOfStock">Sorry, but we are out of stock right now. Add your email to be notified when we replenish our inventory.</p>
+        {this.state.submitted ? <p className="ctr__confirm">Thanks for subscribing! We will let you know if we get enough interest to produce the product.</p> : 
+        <div>
         <div className="ctr__email">
         <form action="#" class="form">
                   <div className="form__group">
@@ -29,7 +32,9 @@ export default class FormCollect extends Component {
                   </div>
         </form>
         </div>
-        <div className="purchase" onClick={this.onSubmitEmail}>Submit</div>
+        <div className="purchase" onClick={this.onSubmitEmail}>Submit</div> 
+        </div>}
+        
       </div>
       
     )

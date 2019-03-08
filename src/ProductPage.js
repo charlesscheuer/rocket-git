@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ProductCarousel from './ProductCarousel';
 import FormCollect from './FormCollect';
-import { Select } from 'evergreen-ui';
 
 
 export default class ProductPage extends Component {
@@ -13,26 +12,19 @@ export default class ProductPage extends Component {
         }
       }
 
-    bought = () => {
-        this.setState(({ bought }) => ({
-          bought: !bought
-      }));
-    }
-
   render() {
     return (
       <div>
-      {this.state.bought ? <FormCollect/> : <div className="beforeBought">
-      <ProductCarousel/>
+      <div className="beforeBought">
+      <ProductCarousel className="carousel"/>
+      <div className="fleeceCTA">
+      <div className="fleeceCTA_right">
       <p className="price">&#36;45.99</p>
-      <Select className="size">
-          <option value="Small">Small</option>
-          <option value="Medium" checked>Medium</option>
-          <option value="Large">Large</option>
-      </Select>
-      <div className="purchase" onClick={this.bought}>Buy now</div>
-      </div> }
-      
+      <p className="price_desc">Add your email to be notified if we make this product. We need at least 1,000 customers to produce the fleece.</p>
+      </div>
+      <FormCollect />
+      </div>
+      </div> 
       </div>
     )
   }

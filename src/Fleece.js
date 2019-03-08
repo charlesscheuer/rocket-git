@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import rocketFleece from '../src/img/The rocket fleece@2x.png';
 import pullover from '../src/img/pullover.png';
 import ProductPage from '../src/ProductPage';
+import Mountain from './Mountain';
 
 
 export default class Fleece extends Component {
@@ -15,6 +16,7 @@ export default class Fleece extends Component {
         <h1>Rocket Apparel Fleece</h1> 
         <ProductPage/>
         </div>
+        <Mountain />
       </div>
     )
   }

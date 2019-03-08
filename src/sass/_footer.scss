@@ -1,14 +1,39 @@
 .footer {
     background-color: $color-secondary;
-    padding: 8rem;
-    &__img {
-        display: flex;
-        justify-content: center;
-        img {
-            height: 13rem;
-            width: auto;
-            margin-top: 4rem;
-            display: inline-block;
+    padding: 2rem;
+}
+
+.bottom {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 20rem;
+    align-items: center;
+    @media screen and (max-width: $bp-medium) {
+        margin-top: 4rem;
+    }
+    
+    &__form {
+        width: 20%;
+    }
+    &__name {
+        width: 20%;
+        height: auto;
+        margin-right: 25%;
+        margin-left: 20%;
+        @media screen and (max-width: $bp-medium) {
+        display: none;
+        }
+    }
+    &__logo {
+        height: auto;
+        width: 10%;
+        @media screen and (max-width: $bp-medium) {
+            width: 20%;
+        }
+        @media screen and (max-width: 400px) {
+            transform: translateY(5.7rem);
         }
     }
 }
@@ -16,7 +41,8 @@
 .nav {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     // ^ when width of one of the columns becomes less than 15rem one of them will disappear
     grid-gap: 2rem;
     align-items: center;
@@ -44,14 +70,33 @@
     }
 }
 
-.subscribeSubmit {
-       font-size: 1.4rem;
-       font-weight: 400;
-       padding: 1.5rem;
-       border-radius: 10rem;
-       color: #5c996c;
-       background-color: $color-grey-dark-2;
-       text-decoration: none;
-       font-family: $font-display;
+.subscribe {
+
+    &Submit {
+        font-size: 1.4rem;
+        font-weight: 400;
+        width: 10rem;
+        padding: 1.2rem;
+        border-radius: 1rem;
+        color: #5c996c;
+        background-color: $color-grey-dark-2;
+        text-decoration: none;
+        font-family: $font-display;
+        margin-top: 1rem;
+        text-align: center;
+        cursor: pointer;
+     }
+}
+
+
+.thanking {
+    font-family: $font-display;
+    color: $color-grey-dark-2;
+    font-size: 1.6rem;
+    font-weight: 400;
+    @media screen and (max-width: $bp-medium) {
+        width: 30rem;
     }
+}
+
 

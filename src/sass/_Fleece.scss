@@ -1,13 +1,10 @@
 .rocketFleece {
     background-color: $color-grey-dark-2;
-    padding-bottom: 40rem;
-    
+    padding-bottom: 4rem;
     &__head {
         width: 30rem;
         height: auto;
         margin-left: 50vw;
-        // position: relative;
-        // left: 50%;
         transform: translateX(-50%);
         padding-top: 4rem;
         padding-bottom: 2rem;
@@ -29,15 +26,31 @@
     border-radius: 1rem;
     color: $color-grey-dark-2;
     font-family: $font-display;
-    width: 70vw;
+    width: 90vw;
     text-align: center;
     & h1 {
         font-size: 5rem;
         padding-bottom: 4rem;
     }
+    .carousel {
+        width: 75%;
+        height: auto;
+        display: inline-block;
+    }
     .price {
         font-size: 2rem;
         padding-top: 2rem;
+        @media screen and (max-width: $bp-medium) {
+            font-size: 1.6rem;
+            padding-top: 0;
+        }
+        &_desc{
+            font-size: 2rem;
+            font-weight: 400;
+            @media screen and (max-width: $bp-medium) {
+                font-size: 1.6rem;
+            }
+        }
     }
     .outOfStock {
         font-size: 2rem;
@@ -63,7 +76,7 @@
         padding: 1.8rem 3rem;
         cursor: pointer;
         transition: all .2s;
-        margin-top: 2rem;
+        margin-top: .5rem;
         display: inline-block;
         width: 25rem;
         &:hover {
@@ -117,6 +130,9 @@
         margin-top: .7rem;
         display: block;
         transition: all .3s;
+        @media screen and (max-width: 400px) {
+            width: 8rem;
+        }
     }
 
     &__input:placeholder-shown + &__label {
@@ -131,6 +147,30 @@
     &__email {
         display: flex;
         justify-content: center;
+    }
+    &__confirm {
+        width: 25rem;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+}
+
+.fleeceCTA {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    @media screen and (max-width: $bp-medium) {
+        flex-direction: column;
+        justify-content: center;
+    }
+    &_right {
+        width: 40%;
+        @media screen and (max-width: $bp-medium) {
+            width: 90%;
+            font-size: 1.6rem;
+        }
     }
 }
 

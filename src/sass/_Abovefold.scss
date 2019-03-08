@@ -1,4 +1,3 @@
-
 .aboveFold {
     height: 100vh;
     background-image: linear-gradient(
@@ -16,38 +15,51 @@
         width: 35rem;
         height: auto;
         margin-top: 10rem;
+        @media screen and (max-width: $bp-medium) {
+            display: none;
+        }
     }
     & h1 {
         font-weight: 400;
-        // position: absolute;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
         padding: 0 20rem;
         padding-top: 15rem;
-        padding-bottom: 5rem;
+        padding-bottom: 1rem;
         color: $color-grey-dark-2;
         font-size: 7rem;
-        // margin: 0rem 20vh;
+        @media screen and (max-width: $bp-medium) {
+            padding: 0 10rem;
+            padding-top: 25rem;
+            font-size: 7rem;
+        }
+        @media screen and (max-width: $bp-small) {
+            padding: 0 4rem;
+            padding-top: 35vh;
+            font-size: 5rem;
+        }
+        @media screen and (max-width: 500px) {
+            padding: 0 1rem;
+            padding-top: 35vh;
+        }
     }
-    .btn:hover {
-        transform: translateY(3px);
-    }
-    .btn:active {
-        transform: translateY(-1px);
+    .btn {
+    //     @media only screen and (max-width: tab-port) {
+    //         margin-top: -10rem;
+    // }
+        &:hover {
+            transform: translateY(3px);
+        }
+        &:active {
+            transform: translateY(-1px);
+        }
     }
 
     .logo {
         position: absolute;
-        top: 9%;
-        left: 88%;
+        top: 6.5rem;
+        right: 4rem;
     } 
     .rocketLogo {
         height: 10rem;
         width: auto;
-        // position: relative;
-        // bottom: 35rem;
-        // ^ this is to have it centered
-        // margin: 7.5rem 7rem;
     }   
 }

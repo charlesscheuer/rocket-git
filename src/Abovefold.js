@@ -6,10 +6,10 @@ const Abovefold = ({ctaRouteChange}) => {
     return (
       <div className="aboveFold">
       <img className="rocketTitle" src={rocketTitle} alt="rocket apparel"/>
-      <h1>Cliche copywritings goes right here</h1>
       <div className="logo">
-      <img className="rocketLogo" src={rocketLogo} alt="rocket logo"/>
+        <img className="rocketLogo" src={rocketLogo} alt="rocket logo"/>
       </div>
+      <h1>Cliche copywriting goes right here</h1>
       <div className="cta">
       <button className="btn" onClick={() => ctaRouteChange('Ourstory')}>Our story</button>
       <button className="btn" onClick={() => ctaRouteChange('Fleece')}>The Fleece</button>
