@@ -4,7 +4,6 @@ import fleeceImg2 from '../src/img/fleece-img-2.JPG';
 import ArrowLeft from './ArrowLeft';
 import ArrowRight from './ArrowRight';
 
-
 export default class ProductCarousel extends Component {
   render() {
     return (

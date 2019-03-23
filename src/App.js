@@ -4,6 +4,7 @@ import Sourcepage from './Sourcepage';
 import NavMenu from './NavMenu';
 import NavToggle from './NavToggle';
 import Footer from './Footer';
+import { BrowserRouter} from 'react-router-dom';
 
 class App extends Component {
 
@@ -33,6 +34,7 @@ class App extends Component {
 
   render() {
     return (
+      <BrowserRouter>
       <div className="app">
       {this.state.menu ? 
         <NavMenu onRouteChange={this.onRouteChange} /> : 
@@ -40,7 +42,8 @@ class App extends Component {
       }
       <NavToggle click={this.menuToggleHandler} checked={this.state.menu}/>
       {!this.state.menu ? <Footer ctaRouteChange={this.ctaRouteChange}/> : null }
-  </div>
+      </div>
+      </BrowserRouter>
     );
   }
 }

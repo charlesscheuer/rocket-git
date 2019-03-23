@@ -192,14 +192,16 @@
         width: 78%;
         margin-left: auto;
         background-color: cyan;
+        height: 50vw;
         img {
             width: 100%;
-            object-fit: contain;
+            height: 100%;
+            object-fit: cover;
         }
     }
     &__others {
         width: 20%;
-        height: 72rem;
+        height: 50vw;
         overflow-y: scroll;
         &:hover {
             cursor: pointer;
@@ -219,9 +221,9 @@
     z-index: 100;
     position: absolute;
     left: 50%;
+    cursor: pointer;
+    padding: 10rem;
     
     &__icon {
-        margin-left: 10rem;
-        cursor: pointer;
     }
 }

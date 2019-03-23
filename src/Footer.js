@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import rocketLogo from '../src/img/rocket-02.png';
 import rocketTitle from '../src/img/Rocket Apparel@2x.png';
+import { route , link } from 'react-router-dom';
 const email = 'charlesfscheuer@gmail.com';
+
 
 export default class Footer extends Component {
 
