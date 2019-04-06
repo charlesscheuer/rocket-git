@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/Our story@2x.96fe8e43.png"
   },
   {
-    "revision": "c5b11fb3f281e69f482a",
+    "revision": "4fead1ff1831475962ed",
     "url": "/rocket-git/static/css/main.5197c503.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/Rocket Apparel@2x.d44c29de.png"
   },
   {
-    "revision": "c5b11fb3f281e69f482a",
-    "url": "/rocket-git/static/js/main.bc834fce.chunk.js"
+    "revision": "4fead1ff1831475962ed",
+    "url": "/rocket-git/static/js/main.900b3c2d.chunk.js"
   },
   {
     "revision": "cff197232c4aff7d33aaad3802628518",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/mountains.d015ec24.jpg"
   },
   {
-    "revision": "ce193a1b8d93294fa5a176b6fff5a48b",
+    "revision": "42924f3007d5e3e43983203b5b85658d",
     "url": "/rocket-git/index.html"
   }
 ];
