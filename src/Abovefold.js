@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import rocketLogo from '../src/img/rocket-02.png';
 import rocketTitle from '../src/img/Rocket Apparel@2x.png';
 
@@ -11,8 +12,8 @@ const Abovefold = ({ctaRouteChange}) => {
       </div>
       <h1>Cliche copywriting goes right here</h1>
       <div className="cta">
-      <button className="btn" onClick={() => ctaRouteChange('Ourstory')}>Our story</button>
-      <button className="btn" onClick={() => ctaRouteChange('Fleece')}>The Fleece</button>
+      <Link to="/Our-story" className="btn">Our Story</Link>
+      <Link to="/Fleece" className="btn">The Fleece</Link>
       </div>
       </div>
     )

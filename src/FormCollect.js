@@ -25,7 +25,7 @@ export default class FormCollect extends Component {
         {this.state.submitted ? <p className="ctr__confirm">Thanks for subscribing! We will let you know if we get enough interest to produce the product.</p> : 
         <div>
         <div className="ctr__email">
-        <form action="#" class="form">
+        <form action="#" className="form">
                   <div className="form__group">
                     <input type="email" onChange={this.onEmailChange} className="form__input" placeholder="Email address" id="email" required />
                     <label htmlFor="email" className="form__label">Enter email address</label>

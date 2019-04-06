@@ -5,12 +5,14 @@ import FormCollect from './FormCollect';
 
 export default class ProductPage extends Component {
 
-    constructor() {
+  constructor() {
         super();
         this.state = {
           bought: false
         }
       }
+
+  
 
   render() {
     return (

@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 
 class NavToggle extends Component {
 
-  // constructor(props) {
-  //   super(props);
-  // }
-  // no need to call a constructor because we have these props and can call them with this.props
   isChecked = () => this.props.checked ? null : "checked";
 
   render (){
