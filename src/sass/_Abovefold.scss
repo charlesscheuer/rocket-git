@@ -1,13 +1,20 @@
 .aboveFold {
     height: 100vh;
-    background-image: linear-gradient(
+    background-image: 
+    linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.4), 
         rgba(0, 0, 0, .2)), 
-        url(../img/mountains.jpg);
+        url(../img/Fleece/logo-2-01.jpg);
     
+    // url(../img/Fleece/logo-2-01.jpg); possible
+    // url(../img/Fleece/logo-3-01.jpg); possible if flipped 
+    // url(../img/Fleece/logo-on-fleece-01.jpg);
+    //  url(../img/Fleece/lookbook-2-01.png);  possible if background position is changed
+    // background-position: 0 60%;
     background-size: cover;
-    background-position: top;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
     text-align: center;
 

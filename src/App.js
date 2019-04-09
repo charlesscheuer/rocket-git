@@ -6,7 +6,7 @@ import NavToggle from './NavToggle';
 import Footer from './Footer';
 import Ourstory from './Ourstory';
 import Fleece from './Fleece';
-import { BrowserRouter, Route} from 'react-router-dom';
+import { Route} from 'react-router-dom';
 
 class App extends Component {
 
@@ -26,7 +26,7 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <div className="root" id="root">
       <Route path='/' exact render={() => <div className="app">
       {this.state.menu ? <NavMenu click={this.menuToggleHandler}/> : 
       <Abovefold /> }
@@ -45,7 +45,7 @@ class App extends Component {
       <NavToggle click={this.menuToggleHandler} checked={this.state.menu}/>
       {!this.state.menu ? <Footer /> : null }
       </div>}/>
-      </BrowserRouter>
+      </div>
     );
   }
 }

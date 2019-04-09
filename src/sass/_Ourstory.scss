@@ -9,6 +9,9 @@
         display: inline-block;
         padding-top: 4rem;
         padding-bottom: 2rem;
+        @media screen and (max-width: 570px) {
+            padding-top: 15rem;
+        }
     }
     &__icon {
         height: 6rem;
