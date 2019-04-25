@@ -76,13 +76,13 @@
 }
 
 .subscribe {
-
+    
     &Submit {
         font-size: 1.4rem;
         font-weight: 400;
         width: 10rem;
         padding: 1.2rem;
-        border-radius: 1rem;
+        border-radius: .5rem;
         color: #5c996c;
         background-color: $color-grey-dark-2;
         text-decoration: none;
@@ -90,6 +90,7 @@
         margin-top: 1rem;
         text-align: center;
         cursor: pointer;
+        border: none;
      }
 }
 

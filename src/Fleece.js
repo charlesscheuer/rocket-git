@@ -18,7 +18,6 @@ export default class Fleece extends Component {
       </div>  
           
         <div className="productPage">
-        {/*<h1>Rocket Apparel Fleece</h1> */}
         <ProductPage/>
         </div>
         <Mountain />

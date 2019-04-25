@@ -10,7 +10,7 @@ const Abovefold = ({ctaRouteChange}) => {
       <div className="logo">
         <img className="rocketLogo" src={rocketLogo} alt="rocket logo"/>
       </div>
-      <h1>Cliche copywriting goes right here</h1>
+      <h1>Launching the Rocket: the first of a series of non-profit products that raise awareness for and solve ecological issues</h1>
       <div className="cta">
       <Link to="/Our-story" className="btn">Our Story</Link>
       <Link to="/Fleece" className="btn">The Fleece</Link>

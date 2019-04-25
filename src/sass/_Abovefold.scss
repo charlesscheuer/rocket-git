@@ -27,12 +27,12 @@
         }
     }
     & h1 {
-        font-weight: 400;
+        font-weight: 600;
         padding: 0 20rem;
         padding-top: 15rem;
-        padding-bottom: 1rem;
+        padding-bottom: 2.5rem;
         color: $color-grey-dark-2;
-        font-size: 7rem;
+        font-size: 4rem;
         @media screen and (max-width: $bp-medium) {
             padding: 0 10rem;
             padding-top: 25rem;
@@ -51,7 +51,11 @@
     .btn {
     //     @media only screen and (max-width: tab-port) {
     //         margin-top: -10rem;
+
     // }
+        text-decoration: none;
+        font-family: $font-display;
+        font-weight: 400;
         &:hover {
             transform: translateY(3px);
         }
