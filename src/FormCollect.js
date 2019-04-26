@@ -50,10 +50,11 @@ export default class FormCollect extends Component {
         <div className="ctr">
         {this.state.submitted ? <div> <p className="ctr__confirm">Thanks for subscribing! We will let you know if we get enough interest to produce the product.</p> <button className="purchase" onClick={this.goBackHandler}>Go back</button> </div>  : 
         <div>
+        <h2>Join 12 others that are ready to launch the rocket!</h2>
         <div className="ctr__email">
         <form action="#" className="form">
                   <div className="form__group">
-                    <input type="email" onKeyPress={this.onKeyPressHandler} onChange={this.onEmailChange} className="form__input" placeholder="Email address" id="email" required />
+                    <input type="email" onChange={this.onEmailChange} className="form__input" placeholder="Email address" id="email" required />
                     <label htmlFor="email" className="form__label">{this.state.label}</label>
                   </div>
         </form>

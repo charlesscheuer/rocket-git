@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import rocketLogo from '../src/img/rocket-02.png';
+import rocketLogo from '../src/img/rocket-svg-02.png';
 import rocketTitle from '../src/img/Rocket Apparel@2x.png';
 import { Link } from 'react-router-dom';
 const myEmail = 'charlesfscheuer@gmail.com';

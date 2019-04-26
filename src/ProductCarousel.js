@@ -33,19 +33,6 @@ import wallSerious from './img/Fleece/wall-serious-01.jpg';
 import wallGoon2 from './img/Fleece/wall-goon-2-01.jpg';
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default class ProductCarousel extends Component {
 
   constructor() {
@@ -90,7 +77,7 @@ export default class ProductCarousel extends Component {
       <div className="productGallery_container">
       <div className="productGallery">
       <div className="productGallery__others">
-        {this.state.images.map((image, i) => <img src={image} alt={'the rocket fleece'} onClick={() => this.imageFocusedChanger(i)} />)}
+        {this.state.images.map((image, i) => <img src={image} alt='the rocket fleece' onClick={() => this.imageFocusedChanger(i)} />)}
       </div>
       <div className="productGallery__focused">
         <div className="arrows">

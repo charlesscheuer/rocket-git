@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "ad2f557801c47137fc998acdb2144e74",
-    "url": "/rocket-git/static/media/DSC_0367-01.ad2f5578.jpg"
+    "revision": "9bf6330646b34142f660bdf031b49c70",
+    "url": "/rocket-git/static/media/1-01.9bf63306.jpg"
   },
   {
-    "revision": "5714a4552dc3f1c5922e",
-    "url": "/rocket-git/static/css/main.ac5f5f5b.chunk.css"
+    "revision": "7f44e63663b2c0573303",
+    "url": "/rocket-git/static/css/main.de2b4115.chunk.css"
   },
   {
     "revision": "db4a2eef7fede04163da",
@@ -88,16 +88,16 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/standing-01.e11bc755.jpg"
   },
   {
-    "revision": "5714a4552dc3f1c5922e",
-    "url": "/rocket-git/static/js/main.c2004c73.chunk.js"
+    "revision": "ad2f557801c47137fc998acdb2144e74",
+    "url": "/rocket-git/static/media/DSC_0367-01.ad2f5578.jpg"
   },
   {
     "revision": "f93c08c188df71f9406cb05548767cb7",
     "url": "/rocket-git/static/media/sitting-hill-01.f93c08c1.jpg"
   },
   {
-    "revision": "9bf6330646b34142f660bdf031b49c70",
-    "url": "/rocket-git/static/media/1-01.9bf63306.jpg"
+    "revision": "7f44e63663b2c0573303",
+    "url": "/rocket-git/static/js/main.fdad4e6a.chunk.js"
   },
   {
     "revision": "d84fe6b3512237f966412475af5b2874",
@@ -172,7 +172,23 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/sustainable-icon.afd79d2a.png"
   },
   {
-    "revision": "61354bb1f4994052b20d33037f7f91cc",
+    "revision": "0a92d79b511d5cb3850d1121074ed5f5",
+    "url": "/rocket-git/static/media/BasisGrotesque.0a92d79b.woff"
+  },
+  {
+    "revision": "b54a961aebdbc66412714065b71e4217",
+    "url": "/rocket-git/static/media/basis-grotesque-black.b54a961a.woff"
+  },
+  {
+    "revision": "62cbdba6a7531bf78b96b300d7633885",
+    "url": "/rocket-git/static/media/basis-grotesque-bold.62cbdba6.woff"
+  },
+  {
+    "revision": "1bb3e45a5b00460c9ab0010e947246a9",
+    "url": "/rocket-git/static/media/basis-grotesque-regular.1bb3e45a.woff"
+  },
+  {
+    "revision": "810aebcf4a973895e9aec93803c0584f",
     "url": "/rocket-git/index.html"
   }
 ];

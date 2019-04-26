@@ -4,7 +4,6 @@ import pullover from '../src/img/pullover.png';
 import ProductPage from '../src/ProductPage';
 import Mountain from './Mountain';
 
-
 export default class Fleece extends Component {
 
   render() {
@@ -16,7 +15,6 @@ export default class Fleece extends Component {
       <div className="top_centered">
       <img src={pullover} className="rocketFleece__icon" alt="header icon"/>
       </div>  
-          
         <div className="productPage">
         <ProductPage/>
         </div>

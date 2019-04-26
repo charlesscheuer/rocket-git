@@ -30,39 +30,49 @@
         font-weight: 600;
         padding: 0 20rem;
         padding-top: 15rem;
-        padding-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
         color: $color-grey-dark-2;
         font-size: 4rem;
-        @media screen and (max-width: $bp-medium) {
+        @media screen and (max-width: 900px) {
             padding: 0 10rem;
             padding-top: 25rem;
-            font-size: 7rem;
+            font-size: 3rem;
         }
-        @media screen and (max-width: $bp-small) {
+        @media screen and (max-width: 700px) {
             padding: 0 4rem;
             padding-top: 35vh;
-            font-size: 5rem;
+            font-size: 2rem;
         }
         @media screen and (max-width: 500px) {
             padding: 0 1rem;
             padding-top: 35vh;
+            margin-bottom: 7rem;
         }
     }
-    .btn {
-    //     @media only screen and (max-width: tab-port) {
-    //         margin-top: -10rem;
+    .cta {
+        
+        .btn {
+            //     @media only screen and (max-width: tab-port) {
+            //         margin-top: -10rem;
+        
+            // }
+                
+                text-decoration: none;
+                font-family: $font-display;
+                font-weight: 400;
+                &:hover {
+                    transform: translateY(3px);
+                }
+                &:active {
+                    transform: translateY(-1px);
+                }
+                @media screen and (max-width: 500px) {
+                    padding: 1.5rem;
+                }
+            }
 
-    // }
-        text-decoration: none;
-        font-family: $font-display;
-        font-weight: 400;
-        &:hover {
-            transform: translateY(3px);
-        }
-        &:active {
-            transform: translateY(-1px);
-        }
     }
+    
 
     .logo {
         position: absolute;
