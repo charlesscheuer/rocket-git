@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ourStory from '../src/img/Our story@2x.png';
 import ourStoryBook from '../src/img/ourStoryBook.png';
+import RocketIcon from './RocketIcon';
 
 export default class Ourstory extends Component {
   render() {
@@ -24,6 +25,7 @@ export default class Ourstory extends Component {
         <p>In the past few months, we studied the ecological impacts of increased global
         demand for cashmere. It turns out that 70% of Mongolian grasslands are damaged to a degree. 
         If you would like, you can read some of the research here or contact us to learn more.</p>
+        <p className="icon"><RocketIcon /></p>
       </div>
     )
   }

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import rocketLogo from '../src/img/rocket-svg-02.png';
 import rocketTitle from '../src/img/Rocket Apparel@2x.png';
+import EmailIcon from './EmailIcon';
+import FacebookIcon from './FacebookIcon';
+import TwitterIcon from './TwitterIcon';
 import { Link } from 'react-router-dom';
 const myEmail = 'charlesfscheuer@gmail.com';
 
@@ -66,7 +69,18 @@ export default class Footer extends Component {
         
         <div className="bottom">
         <div className="bottom__form">
-        {this.state.submitted ? <div> <p className="thanking">Thanks for subscribing!</p> <button className="subscribeSubmit" onClick={this.goBackHandler}>Go back</button> </div>
+        {this.state.submitted ? 
+          <div>
+           <p className="thanking">Thanks! We will let you know if we get enough interest to launch, in the meantime please share with friends.</p> 
+           <div className="sharing">
+           <a href="mailto:?&subject=Check out the Rocket Fleece!&body=Hey,%0A%0ACheck%20out%20this%20fleece%20I%20found%3A%0Alink%20goes%20here%0A"><EmailIcon /></a>
+           <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//charlesscheuer.github.io/rocket-git/%23/fleece"><FacebookIcon />
+           </a>
+           <a href="https://twitter.com/home?status=Check%20out%20this%20new%20non-profit%20fleece%20that%20is%20trying%20to%20restore%20Mongolian%20grasslands!%20link"><TwitterIcon />
+           </a>
+          </div>
+           <button className="subscribeSubmit" onClick={this.goBackHandler}>Go back</button> 
+          </div>
            : <div className="subscribe">
            <form action="#" className="form">
              <div className="form__group">

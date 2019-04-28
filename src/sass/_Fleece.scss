@@ -41,8 +41,8 @@
     }
     .price {
         font-size: 3rem;
-        padding-top: 2rem;
-        color: #7f7566;
+        // padding-top: 2rem;
+        color: $color-secondary;
         @media screen and (max-width: $bp-medium) {
             font-size: 1.6rem;
             padding-top: 0;
@@ -157,9 +157,11 @@
 
 .ctr {
     h2 {
+        width: 25rem;
         color: $color-secondary;
         margin-bottom: 1rem;
     }
+    
     &__email {
         display: flex;
         justify-content: center;
@@ -169,6 +171,35 @@
         font-weight: 400;
         font-size: 1.5rem;
     }
+    .sharing {
+        margin: 1rem;
+        display: flex;
+        justify-content: space-around;
+        &_icon {
+            margin: .5rem;
+            
+        }
+        &_bg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .5rem;
+            
+            border-radius: 4rem;
+            transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1);
+            & > svg {
+                color: $color-secondary;
+            }
+            &:hover {
+                cursor: pointer;
+                background-color: $color-secondary;
+                transform: rotate(360deg);
+                & > svg {
+                    color: $color-grey-dark-2;
+                }
+            }
+        }
+    }
 }
 
 .fleeceCTA {
@@ -176,13 +207,15 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
+
     align-items: center;
     @media screen and (max-width: $bp-medium) {
         flex-direction: column;
         justify-content: center;
     }
     &_right {
-        width: 40%;
+        width: 30%;
+        color: #7f7566;
         @media screen and (max-width: $bp-medium) {
             width: 100%;
             font-size: 1.6rem;
