@@ -15,10 +15,11 @@ export default class Fleece extends Component {
       <div className="top_centered">
       <img src={pullover} className="rocketFleece__icon" alt="header icon"/>
       </div>  
-        <div className="productPage">
+      <div className="productPage">
         <ProductPage/>
-        </div>
-        <Mountain />
+      </div>
+      <Mountain />
+
       </div>
     )
   }
