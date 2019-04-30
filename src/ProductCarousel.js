@@ -46,22 +46,11 @@ export default class ProductCarousel extends Component {
         wallSerious,
         anotherBridge,
         standingTree,
-        standingTogether,
-        sittingSteps,
-        flowers,
         standingAnother,
-        standing3,
-        girl,
-        sittingHill,
-        imgUno,
-        girlLooksLeft,
+        flowers,
         girlOnBridge,
         girlOnBridge2,
-        girlSitting,
-        girlStands,
-        girlStandsBridge,
-        girlFleece,
-        fromBehind
+        girlStandsBridge
       ],
       count: 0
     };
