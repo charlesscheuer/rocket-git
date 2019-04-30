@@ -23,71 +23,110 @@ import girlSitting from './img/Fleece/girl-sitting-01.jpg';
 import girlStands from './img/Fleece/girl-standing-01.jpg';
 import girlStandsBridge from './img/Fleece/girl-standing-bridge-01.jpg';
 import fleeceLogo from './img/Fleece/logo-on-fleece-01.jpg';
-import fleeceLogo2 from './img/Fleece/logo-2-01.jpg';
-import fleeceLogo3 from './img/Fleece/logo-3-01.jpg';
 import girlFleece from './img/Fleece/girl-in-fleece-01.jpg';
 import fromBehind from './img/Fleece/from-behind-01.jpg';
 import sittingWall2 from './img/Fleece/sitting-wall-01.jpg';
-import wallGoon from './img/Fleece/wall-goon-01.jpg';
 import wallSerious from './img/Fleece/wall-serious-01.jpg';
 import wallGoon2 from './img/Fleece/wall-goon-2-01.jpg';
 
-
 export default class ProductCarousel extends Component {
-
   constructor() {
     super();
     this.state = {
-      images: [fleeceLogo, fleeceLogo3, fleeceLogo2, lookBook, lookBook2,
-               standingBridge, standingBridge2, sittingWall2, wallGoon, wallGoon2, wallSerious,
-              anotherBridge, smilingWall, behindWall, standingTree, standingTogether, sittingSteps,
-              flowers, standingAnother, standing3, girl, sittingHill, imgUno, girlLooksLeft, girlOnBridge,
-              girlOnBridge2, girlSitting, girlStands, girlStandsBridge, girlFleece, fromBehind
-              ],
+      images: [
+        fleeceLogo,
+        lookBook,
+        lookBook2,
+        smilingWall,
+        behindWall,
+        standingBridge,
+        standingBridge2,
+        sittingWall2,
+        wallGoon2,
+        wallSerious,
+        anotherBridge,
+        standingTree,
+        standingTogether,
+        sittingSteps,
+        flowers,
+        standingAnother,
+        standing3,
+        girl,
+        sittingHill,
+        imgUno,
+        girlLooksLeft,
+        girlOnBridge,
+        girlOnBridge2,
+        girlSitting,
+        girlStands,
+        girlStandsBridge,
+        girlFleece,
+        fromBehind
+      ],
       count: 0
-    }
+    };
   }
 
   imageNextHandler = () => {
-    if (this.state.count < this.state.images.length -1) {
-      let add = this.state.count +1;
-      this.setState({count: add})
+    const { count, images } = this.state;
+    if (count < images.length - 1) {
+      const add = count + 1;
+      this.setState({ count: add });
+    } else {
+      this.setState({ count: 0 });
     }
-    else {
-      this.setState({count: 0})
-    }
-  }
+  };
 
   imagePrevHandler = () => {
-    if (this.state.count > 0 ) {
-      let minus = this.state.count -1;
-      this.setState({count: minus})
+    const { count, images } = this.state;
+    if (count > 0) {
+      const minus = count - 1;
+      this.setState({ count: minus });
+    } else {
+      this.setState({ count: images.length - 1 });
     }
-    else {
-        this.setState({count: this.state.images.length -1})
-    }
-  }
+  };
 
-  imageFocusedChanger = (i) => {
-    this.setState({count: i})
-  }
+  imageFocusedChanger = i => {
+    this.setState({ count: i });
+  };
+
   // add an onClick function to make the main image change onClick
   render() {
+    const { images, count } = this.state;
     return (
       <div className="productGallery_container">
-      <div className="productGallery">
-      <div className="productGallery__others">
-        {this.state.images.map((image, i) => <img src={image} alt='the rocket fleece' onClick={() => this.imageFocusedChanger(i)} />)}
-      </div>
-      <div className="productGallery__focused">
-        <div className="arrows">
-            <button onClick={this.imagePrevHandler} className="arrows_right">&larr; Prev</button>
-            <button onClick={this.imageNextHandler} className="arrows_left">Next &rarr;</button>
+        <div className="productGallery">
+          <div className="productGallery__others">
+            {images.map((image, i) => (
+              <img
+                src={image}
+                alt="the rocket fleece"
+                onClick={() => this.imageFocusedChanger(i)}
+              />
+            ))}
+          </div>
+          <div className="productGallery__focused">
+            <div className="arrows">
+              <button
+                type="button"
+                onClick={this.imagePrevHandler}
+                className="arrows_right"
+              >
+                &larr; Prev
+              </button>
+              <button
+                type="button"
+                onClick={this.imageNextHandler}
+                className="arrows_left"
+              >
+                Next &rarr;
+              </button>
+            </div>
+            <img src={images[count]} alt=" a fleece" />
+          </div>
         </div>
-        <img src={this.state.images[this.state.count]} alt=" a fleece" />
       </div>
-      </div>
-      </div>
-    )
+    );
   }
 }

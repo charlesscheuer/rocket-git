@@ -1,333 +1,434 @@
 .rocketFleece {
-    background-color: $color-grey-dark-2;
-    padding-bottom: 4rem;
+  background-color: $color-grey-dark-2;
+  padding-bottom: 4rem;
+  text-align: center;
+  @media screen and (max-width: 500px) {
+    padding-bottom: 10rem;
+  }
+  .top_centered {
     text-align: center;
-    @media screen and (max-width: 500px) {
-        padding-bottom: 10rem;
+  }
+  &__head {
+    width: 30rem;
+    height: auto;
+    display: inline-block;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @media screen and (max-width: 541px) {
+      padding-top: 15rem;
     }
-    .top_centered {
-        text-align: center;
+  }
+  &__icon {
+    height: 5rem;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 4rem;
+    @media screen and (max-width: 541px) {
+      margin-bottom: 1rem;
     }
-    &__head {
-        width: 30rem;
-        height: auto;
-        display: inline-block;
-        padding-top: 4rem;
-        padding-bottom: 2rem;
-        @media screen and (max-width: 541px) {
-            padding-top: 15rem;
+  }
+  .productInfo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 4rem;
+    @media screen and (max-width: 900px) {
+      margin-bottom: 1rem;
+    }
+    &_container {
+      width: 86vw;
+      display: flex;
+      justify-content: space-around;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      &_img {
+        img {
+          border-radius: 1rem;
+          width: 43rem;
+          height: auto;
+          @media screen and (max-width: 600px) {
+            width: 30rem;
+          }
         }
+      }
+
+      p {
+        text-align: left;
+        width: 40%;
+        color: $color-secondary;
+        font-size: 2rem;
+        font-family: $font-display;
+        font-weight: 400;
+        color: #7f7566;
+        @media screen and (max-width: 900px) {
+          width: 100%;
+          padding: 1rem 2rem;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+          border-bottom: 3px solid;
+          &:active,
+          :visited {
+            color: inherit;
+          }
+        }
+      }
     }
-    &__icon {
-        height: 5rem;
-        display: inline-block;
-        width: auto;
-        margin-bottom: 0;
+  }
+  .productInfo2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 4rem;
+    &_container {
+      width: 86vw;
+      display: flex;
+      justify-content: space-around;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+      }
+      &_img {
+        img {
+          border-radius: 1rem;
+          width: 43rem;
+          height: auto;
+          @media screen and (max-width: 600px) {
+            width: 30rem;
+          }
+        }
+      }
+
+      p {
+        text-align: left;
+        width: 40%;
+        color: $color-secondary;
+        font-size: 2rem;
+        font-family: $font-display;
+        font-weight: 400;
+        color: #7f7566;
+        @media screen and (max-width: 900px) {
+          width: 100%;
+          padding: 1rem 2rem;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+          border-bottom: 3px solid;
+          &:active,
+          :visited {
+            color: inherit;
+          }
+        }
+      }
     }
-    &_desc {
-        color: black;
-    }
+  }
+  &_desc {
+    color: black;
+  }
 }
 
 .productPage {
-    border-radius: 1rem;
+  border-radius: 1rem;
+  color: $color-secondary;
+  font-family: $font-display;
+  width: 100vw;
+  text-align: center;
+  @media screen and (max-width: $bp-medium) {
+    padding-bottom: 7rem;
+  }
+  & h1 {
+    font-size: 5rem;
+    padding-bottom: 4rem;
+  }
+  .price {
+    font-size: 3.2rem;
+    // padding-top: 2rem;
     color: $color-secondary;
-    font-family: $font-display;
-    width: 100vw;
-    text-align: center;
+    &_sale {
+      color: #7f7566;
+    }
     @media screen and (max-width: $bp-medium) {
-        padding-bottom: 7rem;
+      font-size: 2rem;
+      padding-top: 0;
     }
-    & h1 {
-        font-size: 5rem;
-        padding-bottom: 4rem;
+    &_desc {
+      font-size: 2rem;
+      font-weight: 400;
+      text-align: left;
+      color: #7f7566;
+      @media screen and (max-width: $bp-medium) {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+      }
     }
-    .price {
-        font-size: 3rem;
-        // padding-top: 2rem;
-        color: $color-secondary;
-        @media screen and (max-width: $bp-medium) {
-            font-size: 1.6rem;
-            padding-top: 0;
-        }
-        &_desc{
-            font-size: 2rem;
-            font-weight: 400;
-            text-align: left;
-            color: #7f7566;
-            @media screen and (max-width: $bp-medium) {
-                font-size: 1.6rem;
-                text-align: center;
-                margin-bottom: 1.5rem;
-                padding: 0 1rem;
-            }
-        }
-        
+  }
+
+  .outOfStock {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .size {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10rem;
+    height: auto;
+  }
+  .purchase {
+    // this is the buy now button
+    background-color: #7f7566;
+    color: $color-grey-dark-2;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: $font-display;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-block;
+    width: 25rem;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: $color-grey-dark-2;
+      background-color: $color-secondary;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
-    
-    .outOfStock {
-        font-size: 2rem;
-        font-weight: 400;
+    &:active {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
-    .size {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 10rem;
-            height: auto;
-    }
-    .purchase {
-        // this is the buy now button
-        background-color: #7f7566;
-        color: $color-grey-dark-2;
-        border: none;
-        border-radius: .5rem;
-        font-family: $font-display;
-        font-weight: 600;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        padding: 1.8rem 3rem;
-        cursor: pointer;
-        transition: all .2s;
-        margin-top: .5rem;
-        display: inline-block;
-        width: 25rem;
-        &:hover {
-            background-color: rgba(0,0,0,.5);
-            color: $color-grey-dark-2;
-            background-color: $color-secondary;
-            box-shadow: 0 10px 20px rgba(0,0,0,.2);
-        }
-        &:active {
-            box-shadow: 0 5px 10px rgba(0,0,0,.2);
-        }
-    }
-    
+  }
 }
 
 // below this is the form
-.form { 
-    text-align: left;
-    &__input {
-        font-size: 1.5rem;
-        font-family: inherit;
-        color: inherit;
-        padding: 1.5rem 2rem;
-        border-radius: 2px;
-        background-color: rbga(#fff, .5);
-        color: $color-secondary;
-        border: none;
-        border-bottom: 3px solid transparent;
-        display: inline-block;
-        width: 25rem;
-        transition: all .3s;
+.form {
+  text-align: left;
+  &__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rbga(#fff, 0.5);
+    color: $color-secondary;
+    border: none;
+    border-bottom: 3px solid transparent;
+    display: inline-block;
+    width: 25rem;
+    transition: all 0.3s;
 
-        &:focus {
-            outline: none;
-            box-shadow: 0 1rem 2rem rgba(#000, .1);
-            border-bottom: 3px solid #27c352;
-        }
-
-        &:focus:invalid {
-            border-bottom: 3px solid $color-grey-dark-2;
-        }
-
-        &::-webkit-input-placeholder {
-            color: #7f7566;
-        }
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(#000, 0.1);
+      border-bottom: 3px solid #27c352;
     }
 
-    &__label {
-        font-size: 1.2rem;
-        font-weight: 700;
-        // margin-left: 2rem;
-        margin-top: .7rem;
-        display: block;
-        transition: all .3s;
-        position: relative;
-        left: 2rem;
-        @media screen and (max-width: 500px) {
-            width: 100%;
-        }
+    &:focus:invalid {
+      border-bottom: 3px solid $color-grey-dark-2;
     }
 
-    &__input:placeholder-shown + &__label {
-        opacity: 0;
-        visibility: hidden;
-        position: relative;
-        transform: translateY(-4rem);
+    &::-webkit-input-placeholder {
+      color: #7f7566;
     }
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    // margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+    position: relative;
+    left: 2rem;
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    transform: translateY(-4rem);
+  }
 }
 
 .ctr {
-    h2 {
-        width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 40rem;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    width: 25rem;
+    color: $color-secondary;
+    margin-bottom: 1rem;
+  }
+
+  &__email {
+    display: flex;
+    justify-content: center;
+  }
+  &__confirm {
+    width: 25rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  .sharing {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+    &_icon {
+      margin: 0.5rem;
+    }
+    &_bg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+
+      border-radius: 4rem;
+      transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+      & > svg {
         color: $color-secondary;
-        margin-bottom: 1rem;
-    }
-    
-    &__email {
-        display: flex;
-        justify-content: center;
-    }
-    &__confirm {
-        width: 25rem;
-        font-weight: 400;
-        font-size: 1.5rem;
-    }
-    .sharing {
-        margin: 1rem;
-        display: flex;
-        justify-content: space-around;
-        &_icon {
-            margin: .5rem;
-            
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: $color-secondary;
+        transform: rotate(360deg);
+        & > svg {
+          color: $color-grey-dark-2;
         }
-        &_bg {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: .5rem;
-            
-            border-radius: 4rem;
-            transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1);
-            & > svg {
-                color: $color-secondary;
-            }
-            &:hover {
-                cursor: pointer;
-                background-color: $color-secondary;
-                transform: rotate(360deg);
-                & > svg {
-                    color: $color-grey-dark-2;
-                }
-            }
-        }
+      }
     }
+  }
 }
 
 .fleeceCTA {
-    margin-top: 2rem;
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-
-    align-items: center;
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (max-width: $bp-medium) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  &_right {
+    width: 30%;
+    color: #7f7566;
     @media screen and (max-width: $bp-medium) {
-        flex-direction: column;
-        justify-content: center;
+      width: 100%;
+      font-size: 1.6rem;
     }
-    &_right {
-        width: 30%;
-        color: #7f7566;
-        @media screen and (max-width: $bp-medium) {
-            width: 100%;
-            font-size: 1.6rem;
-        }
-    }
+  }
 }
 
 .productGallery {
-    &_container {
-        width: 100vw;
-        justify-content: center;
-        display: flex;
-    }
-    display: flex;
-    align-items: center;
+  &_container {
+    width: 100vw;
     justify-content: center;
-    margin-top: 4rem;
-    width: 70%;
+    display: flex;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  width: 70%;
+  @media screen and (max-width: 830px) {
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+  }
+  &__focused {
+    width: 80%;
+    margin-left: auto;
+    height: 50vw;
+    position: relative;
     @media screen and (max-width: 830px) {
-        flex-direction: column;
-        width: 100vw;
-        align-items: center;
+      width: 100%;
     }
-    &__focused {
-        width: 80%;
-        margin-left: auto;
-        height: 50vw;
-        position: relative;
-        @media screen and (max-width: 830px) {
-            width: 100%;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border: 2px solid $color-grey-dark-2;
-            @media screen and (max-width: 830px) {
-                border: none;
-            }
-        }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 2px solid $color-grey-dark-2;
+      border-radius: 1rem;
+      @media screen and (max-width: 830px) {
+        border: none;
+      }
     }
-    &__others {
-        width: 20%;
-        height: 50vw;
-        overflow-y: scroll;
-        @media screen and (max-width: 830px) {
-            display: none;
-        }
-        &:hover {
-            cursor: pointer;
-        }
-        img {
-            border: 2px solid $color-grey-dark-2;
-            display: block;
-            width: 100%;
-            object-fit: contain;
-        }
+  }
+  &__others {
+    width: 20%;
+    height: 50vw;
+    overflow-y: scroll;
+    @media screen and (max-width: 830px) {
+      display: none;
     }
+    &:hover {
+      cursor: pointer;
+    }
+    img {
+      border: 2px solid $color-grey-dark-2;
+      display: block;
+      width: 100%;
+      object-fit: contain;
+      //   border-radius: 1rem;
+    }
+  }
 }
 
 .arrows {
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    &_left, &_right {
-        width: 12rem;
-        background-color: $color-grey-dark-2;
-        padding: 2rem;
-        margin: 1rem;
-        border-radius: .5rem;
-        font-size: 1.5rem;
-        transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        border: none;
-        @media screen and (max-width: 530px) {
-           padding: 1rem;
-           font-size: 1rem;
-           width: 6rem;
-        }
-        &:hover {
-            cursor: pointer;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        &:active {
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            transform: translateY(2px);
-        }
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &_left,
+  &_right {
+    width: 12rem;
+    background-color: $color-grey-dark-2;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: none;
+    @media screen and (max-width: 530px) {
+      padding: 1rem;
+      font-size: 1rem;
+      width: 6rem;
     }
-}
-
-.goon {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background-color: pink;
-    p {
-        margin-right: auto;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
-    &_img {
-        width: 30rem;
-        border-radius: 100rem;
-        &-2{
-            width: 10rem;
-            height: auto;
-            border-radius: 200rem;
-        }
+    &:active {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(2px);
     }
-
+  }
 }

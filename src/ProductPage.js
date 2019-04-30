@@ -1,40 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ProductCarousel from './ProductCarousel';
 import FormCollect from './FormCollect';
-import RocketIcon from './RocketIcon'
-// import wallGoon from './img/Fleece/wall-goon-01.jpg';
-// import fleeceLogo3 from './img/Fleece/logo-3-01.jpg';
+import RocketIcon from './RocketIcon';
 
-
-export default class ProductPage extends Component {
-
-  constructor() {
-        super();
-        this.state = {
-          bought: false
-        }
-      }
-
-  render() {
-    return (
-      <div>
+const ProductPage = () => {
+  return (
+    <div>
       <div className="beforeBought">
-      {/*<div className="goon">
+        {/* <div className="goon">
         <img className="goon_img" src={wallGoon} />
         <p className="goon_paragraph">test</p>
         <img className="goon_img-2" src={fleeceLogo3} />
     </div> */}
-      <div className="fleeceCTA">
-      <div className="fleeceCTA_right">
-      <RocketIcon/>
-      <p className="price">&#36;49.99</p>
-      <p className="price_desc">Add your email to be notified if we make this product. We need at least 1,000 customers to launch the rocket and produce the fleece. If we never make the fleece, then you won't ever receive an email from us.</p>
+        <div className="fleeceCTA">
+          <div className="fleeceCTA_right">
+            <RocketIcon />
+            <p className="price">
+              <s className="price_sale">&#36;59.99</s> &#36;49.99
+            </p>
+            <p className="price_desc">
+              Our early adopters will get the fleece for $10 less. Add your
+              email to be notified when the rocket launches.
+            </p>
+          </div>
+          <FormCollect />
+        </div>
+        <ProductCarousel className="carousel" />
       </div>
-      <FormCollect />
-      </div>
-      <ProductCarousel className="carousel"/>
-      </div> 
-      </div>
-    )
-  }
-}
+    </div>
+  );
+};
+
+export default ProductPage;
