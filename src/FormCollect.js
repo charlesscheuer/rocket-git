@@ -125,7 +125,7 @@ export default class FormCollect extends Component {
               className="purchase"
               onClick={this.onSubmitEmail}
             >
-              Submit
+              Request Invite
             </button>
           </div>
         )}
