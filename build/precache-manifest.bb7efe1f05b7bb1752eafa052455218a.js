@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "f93c08c188df71f9406cb05548767cb7",
-    "url": "/rocket-git/static/media/sitting-hill-01.f93c08c1.jpg"
+    "revision": "a3733012a685ac27467f45b7863d4b24",
+    "url": "/rocket-git/static/media/standing-2-01.a3733012.jpg"
   },
   {
-    "revision": "cb6f266d818701631420",
+    "revision": "f34451e8ba72c87609b1",
     "url": "/rocket-git/static/css/main.c1792a35.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/js/runtime~main.25742968.js"
   },
   {
-    "revision": "745e0585c7974663831c",
-    "url": "/rocket-git/static/js/2.be7de366.chunk.js"
+    "revision": "22b4960ab2c8f2ff11ec",
+    "url": "/rocket-git/static/js/2.2bc33ea9.chunk.js"
   },
   {
     "revision": "d44c29de6a8daa509621e5718dc9220c",
@@ -72,40 +72,12 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/standing-tree-01.99a796ae.jpg"
   },
   {
-    "revision": "592c8c05c81836a0a032b57224fbe030",
-    "url": "/rocket-git/static/media/standing-together-01.592c8c05.jpg"
-  },
-  {
-    "revision": "772a1e4001083a30407af0a289a25813",
-    "url": "/rocket-git/static/media/sitting-steps-01.772a1e40.jpg"
-  },
-  {
     "revision": "f768e991b988cd2498e9570b4f8663b9",
     "url": "/rocket-git/static/media/flowers-01.f768e991.jpg"
   },
   {
-    "revision": "a3733012a685ac27467f45b7863d4b24",
-    "url": "/rocket-git/static/media/standing-2-01.a3733012.jpg"
-  },
-  {
-    "revision": "e11bc7553e15bcfea062ec0fabf7e519",
-    "url": "/rocket-git/static/media/standing-01.e11bc755.jpg"
-  },
-  {
-    "revision": "ad2f557801c47137fc998acdb2144e74",
-    "url": "/rocket-git/static/media/DSC_0367-01.ad2f5578.jpg"
-  },
-  {
-    "revision": "cb6f266d818701631420",
-    "url": "/rocket-git/static/js/main.d458756f.chunk.js"
-  },
-  {
-    "revision": "9bf6330646b34142f660bdf031b49c70",
-    "url": "/rocket-git/static/media/1-01.9bf63306.jpg"
-  },
-  {
-    "revision": "d84fe6b3512237f966412475af5b2874",
-    "url": "/rocket-git/static/media/looking-left-girl-01.d84fe6b3.jpg"
+    "revision": "f34451e8ba72c87609b1",
+    "url": "/rocket-git/static/js/main.5e22d7ee.chunk.js"
   },
   {
     "revision": "028db7460b727a9dccf15c35767d47d7",
@@ -116,28 +88,12 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/bridge-girl-2-01.34faab20.jpg"
   },
   {
-    "revision": "c352983139fe63328c073084e56373b0",
-    "url": "/rocket-git/static/media/girl-sitting-01.c3529831.jpg"
-  },
-  {
-    "revision": "fb464a38f8c25c0c09c87223f87a43f4",
-    "url": "/rocket-git/static/media/girl-standing-01.fb464a38.jpg"
-  },
-  {
     "revision": "6cccb38d215e418808a4e03946198938",
     "url": "/rocket-git/static/media/girl-standing-bridge-01.6cccb38d.jpg"
   },
   {
     "revision": "01f46d94735573da843517143b35ad06",
     "url": "/rocket-git/static/media/logo-on-fleece-01.01f46d94.jpg"
-  },
-  {
-    "revision": "439a456728c201e68da82deb0031abb0",
-    "url": "/rocket-git/static/media/girl-in-fleece-01.439a4567.jpg"
-  },
-  {
-    "revision": "bd851d3bf5985a28df9c749d47ff9b0e",
-    "url": "/rocket-git/static/media/from-behind-01.bd851d3b.jpg"
   },
   {
     "revision": "3d7ba30b284e6a49a6c0a9a47689ad85",
@@ -176,8 +132,8 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/logo-2-01.f9026c02.jpg"
   },
   {
-    "revision": "1bb3e45a5b00460c9ab0010e947246a9",
-    "url": "/rocket-git/static/media/basis-grotesque-regular.1bb3e45a.woff"
+    "revision": "0a92d79b511d5cb3850d1121074ed5f5",
+    "url": "/rocket-git/static/media/BasisGrotesque.0a92d79b.woff"
   },
   {
     "revision": "b54a961aebdbc66412714065b71e4217",
@@ -188,11 +144,11 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/basis-grotesque-bold.62cbdba6.woff"
   },
   {
-    "revision": "0a92d79b511d5cb3850d1121074ed5f5",
-    "url": "/rocket-git/static/media/BasisGrotesque.0a92d79b.woff"
+    "revision": "1bb3e45a5b00460c9ab0010e947246a9",
+    "url": "/rocket-git/static/media/basis-grotesque-regular.1bb3e45a.woff"
   },
   {
-    "revision": "2246db11125e251ca8b756a689cee6c3",
+    "revision": "c7621f4bd9139100910bffffe612ab03",
     "url": "/rocket-git/index.html"
   }
 ];

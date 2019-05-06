@@ -19,10 +19,10 @@ const Fleece = () => {
       <div className="productInfo">
         <div className="productInfo_container">
           <p>
-            This is the Rocket Fleece. A comfortable, yet affordable, fleece.
-            The Rocket is part of a non-profit project to raise funds to
-            preserve and restore earth's overlooked treasures. In this case,
-            Mongolian grasslands.
+            This is the Rocket Fleece. A comfortable and affordable fleece. The
+            Rocket is part of a non-profit project to raise funds to preserve
+            and restore earth's overlooked treasures. Our first objective is to
+            help restore Mongolian grasslands.
           </p>
           <div className="productInfo_container_img">
             <img
@@ -44,8 +44,7 @@ const Fleece = () => {
             />
           </div>
           <p>
-            Ready to launch the Rocket? If so, add your email below to be
-            notified when we launch. Not ready to blast off? Read more about{' '}
+            Read more about{' '}
             <a href="https://charlesscheuer.github.io/rocket-git/#/our-story">
               our story
             </a>{' '}
@@ -56,7 +55,8 @@ const Fleece = () => {
             >
               here
             </a>
-            .
+            . Ready to help launch the Rocket? If so, add your email below to be
+            notified when we launch.
           </p>
         </div>
       </div>

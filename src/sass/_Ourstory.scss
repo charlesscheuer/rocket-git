@@ -1,5 +1,9 @@
 .ourStory {
   background-color: $color-secondary;
+  ::selection {
+    color: $color-secondary;
+    background-color: $color-grey-dark-2;
+  }
   &__centered {
     text-align: center;
   }

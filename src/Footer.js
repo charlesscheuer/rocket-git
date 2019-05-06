@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import rocketLogo from './img/rocket-svg-02.png';
 import rocketTitle from './img/Rocket Apparel@2x.png';
 import EmailIcon from './EmailIcon';
 import FacebookIcon from './FacebookIcon';
 import TwitterIcon from './TwitterIcon';
 
-const myEmail = 'charlesfscheuer@gmail.com';
+// const myEmail = 'charlesfscheuer@gmail.com';
 
 const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -56,36 +55,6 @@ export default class Footer extends Component {
     const { submitted, goBackHandler, label } = this.state;
     return (
       <div className="footer">
-        <div className="footLinks">
-          <ul className="nav">
-            <li className="nav__item">
-              <Link to="/" className="nav__link btn">
-                Home
-              </Link>
-            </li>
-            <li className="nav__item">
-              <Link to="/fleece" className="nav__link btn">
-                Fleece
-              </Link>
-            </li>
-            <li className="nav__item">
-              <a className="nav__link btn" href={`mailto:${myEmail}`}>
-                Contact
-              </a>
-            </li>
-            <li className="nav__item">
-              <a className="nav__link btn" href={`mailto:${myEmail}`}>
-                Send Feedback
-              </a>
-            </li>
-            <li className="nav__item">
-              <Link to="/Our-story" className="nav__link btn">
-                Our Story
-              </Link>
-            </li>
-          </ul>
-        </div>
-
         <div className="bottom">
           <div className="bottom__form">
             {submitted ? (
@@ -155,3 +124,33 @@ export default class Footer extends Component {
     );
   }
 }
+
+// <div className="footLinks">
+//           <ul className="nav">
+//             <li className="nav__item">
+//               <Link to="/" className="nav__link btn">
+//                 Home
+//               </Link>
+//             </li>
+//             <li className="nav__item">
+//               <Link to="/fleece" className="nav__link btn">
+//                 Fleece
+//               </Link>
+//             </li>
+//             <li className="nav__item">
+//               <a className="nav__link btn" href={`mailto:${myEmail}`}>
+//                 Contact
+//               </a>
+//             </li>
+//             <li className="nav__item">
+//               <a className="nav__link btn" href={`mailto:${myEmail}`}>
+//                 Send Feedback
+//               </a>
+//             </li>
+//             <li className="nav__item">
+//               <Link to="/Our-story" className="nav__link btn">
+//                 Our Story
+//               </Link>
+//             </li>
+//           </ul>
+//         </div>
