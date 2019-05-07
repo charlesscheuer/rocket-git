@@ -26,7 +26,7 @@ export default class Footer extends Component {
   onSubmitEmail = () => {
     const { ctrSub } = this.state;
     if (regexp.test(ctrSub) && ctrSub.length > 1) {
-      fetch('http://localhost:3000/register', {
+      fetch('https://sleepy-lake-80658.herokuapp.com/register', {
         method: 'post',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
