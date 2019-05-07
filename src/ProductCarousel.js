@@ -78,6 +78,7 @@ export default class ProductCarousel extends Component {
           <div className="productGallery__others">
             {images.map((image, i) => (
               <img
+                key={i}
                 src={image}
                 alt="the rocket fleece"
                 onClick={() => this.imageFocusedChanger(i)}

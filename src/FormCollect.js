@@ -12,7 +12,7 @@ export default class FormCollect extends Component {
       ctrSub: '',
       submitted: false,
       label: 'Email address',
-      count: '125'
+      count: 125
     };
   }
 
@@ -32,7 +32,6 @@ export default class FormCollect extends Component {
   }
 
   goBackHandler = () => {
-    this.setState({ submitted: false });
     fetch('https://sleepy-lake-80658.herokuapp.com/count', {
       method: 'get',
       headers: { 'content-type': 'application/json' }
@@ -42,9 +41,11 @@ export default class FormCollect extends Component {
         if (data > 125) {
           this.setState({ count: data });
         } else {
-          this.setState({ count: 125 });
+          const { newNumber } = this.state;
+          this.setState({ count: newNumber + 1 });
         }
-      });
+      })
+      .then(this.setState({ submitted: false }));
   };
 
   onSubmitEmail = () => {
@@ -76,7 +77,7 @@ export default class FormCollect extends Component {
   };
 
   render() {
-    const { submitted, goBackHandler, count, label } = this.state;
+    const { submitted, count, label } = this.state;
     return (
       <div className="ctr">
         {submitted ? (
@@ -96,7 +97,11 @@ export default class FormCollect extends Component {
                 <TwitterIcon />
               </a>
             </div>
-            <button type="button" className="purchase" onClick={goBackHandler}>
+            <button
+              type="button"
+              className="purchase"
+              onClick={this.goBackHandler}
+            >
               Go back
             </button>
           </div>

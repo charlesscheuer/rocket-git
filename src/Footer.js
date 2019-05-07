@@ -52,7 +52,7 @@ export default class Footer extends Component {
   };
 
   render() {
-    const { submitted, goBackHandler, label } = this.state;
+    const { submitted, label } = this.state;
     return (
       <div className="footer">
         <div className="bottom">
@@ -77,7 +77,7 @@ export default class Footer extends Component {
                 <button
                   type="button"
                   className="subscribeSubmit"
-                  onClick={goBackHandler}
+                  onClick={this.goBackHandler}
                 >
                   Go back
                 </button>
