@@ -6,22 +6,24 @@ const email = 'charlesfscheuer@gmail.com';
 
 class NavMenu extends Component {
   render() {
+    const { click } = this.props;
     return (
       <div className="navigation">
         <div className="navigation__nav">
           <ul className="navigation__list">
             <li className="navigation__item">
-              <Link
-                onClick={this.props.click}
-                className="navigation__link"
-                to="/Fleece"
-              >
+              <Link onClick={click} className="navigation__link" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="navigation__item">
+              <Link onClick={click} className="navigation__link" to="/Fleece">
                 The Fleece
               </Link>
             </li>
             <li className="navigation__item">
               <Link
-                onClick={this.props.click}
+                onClick={click}
                 className="navigation__link"
                 to="/Our-Story"
               >
@@ -29,14 +31,14 @@ class NavMenu extends Component {
               </Link>
             </li>
             <li className="navigation__item">
-              <p className="navigation__link">
-                <a href={`mailto:${email}`}>Contact us</a>
-              </p>
+              <a className="navigation__link" href={`mailto:${email}`}>
+                Contact us
+              </a>
             </li>
             <li className="navigation__item">
-              <p className="navigation__link">
-                <a href={`mailto:${email}`}>Send feedback</a>
-              </p>
+              <a className="navigation__link" href={`mailto:${email}`}>
+                Send feedback
+              </a>
             </li>
           </ul>
         </div>
