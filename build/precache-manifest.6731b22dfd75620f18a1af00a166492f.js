@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/standing-2-01.a3733012.jpg"
   },
   {
-    "revision": "34d7829c7604d8e63866",
-    "url": "/rocket-git/static/css/main.dcde0cc0.chunk.css"
+    "revision": "98042d65e85b730568d3",
+    "url": "/rocket-git/static/css/main.5d18ce56.chunk.css"
   },
   {
     "revision": "db4a2eef7fede04163da",
@@ -76,8 +76,8 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/flowers-01.f768e991.jpg"
   },
   {
-    "revision": "34d7829c7604d8e63866",
-    "url": "/rocket-git/static/js/main.550e891e.chunk.js"
+    "revision": "98042d65e85b730568d3",
+    "url": "/rocket-git/static/js/main.159182cc.chunk.js"
   },
   {
     "revision": "028db7460b727a9dccf15c35767d47d7",
@@ -132,23 +132,23 @@ self.__precacheManifest = [
     "url": "/rocket-git/static/media/logo-2-01.f9026c02.jpg"
   },
   {
-    "revision": "0a92d79b511d5cb3850d1121074ed5f5",
-    "url": "/rocket-git/static/media/BasisGrotesque.0a92d79b.woff"
+    "revision": "b54a961aebdbc66412714065b71e4217",
+    "url": "/rocket-git/static/media/basis-grotesque-black.b54a961a.woff"
   },
   {
     "revision": "62cbdba6a7531bf78b96b300d7633885",
     "url": "/rocket-git/static/media/basis-grotesque-bold.62cbdba6.woff"
   },
   {
-    "revision": "b54a961aebdbc66412714065b71e4217",
-    "url": "/rocket-git/static/media/basis-grotesque-black.b54a961a.woff"
-  },
-  {
     "revision": "1bb3e45a5b00460c9ab0010e947246a9",
     "url": "/rocket-git/static/media/basis-grotesque-regular.1bb3e45a.woff"
   },
   {
-    "revision": "ae4afe3ce424bf72cb2f7ff182739871",
+    "revision": "0a92d79b511d5cb3850d1121074ed5f5",
+    "url": "/rocket-git/static/media/BasisGrotesque.0a92d79b.woff"
+  },
+  {
+    "revision": "5ae3d9eee17d8cdc3b08d9a2de172f24",
     "url": "/rocket-git/index.html"
   }
 ];
