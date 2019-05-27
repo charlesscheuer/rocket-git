@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import EmailIcon from './EmailIcon';
-import FacebookIcon from './FacebookIcon';
-import TwitterIcon from './TwitterIcon';
+import ReactGA from 'react-ga';
+
+import Input from './FormViews/Input';
+import Success from './FormViews/Success';
+import Error from './FormViews/Error';
+
+ReactGA.initialize('UA-133410946-2');
 
 const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -12,7 +16,9 @@ export default class FormCollect extends Component {
       ctrSub: '',
       submitted: false,
       label: 'Email address',
-      count: 125
+      count: 125,
+      error: false,
+      input: true
     };
   }
 
@@ -41,11 +47,11 @@ export default class FormCollect extends Component {
         if (data > 125) {
           this.setState({ count: data });
         } else {
-          const { newNumber } = this.state;
-          this.setState({ count: newNumber + 1 });
+          const { count } = this.state;
+          this.setState({ count: count + 1 });
         }
       })
-      .then(this.setState({ submitted: false }));
+      .then(this.setState({ submitted: false, error: false, input: true }));
   };
 
   onSubmitEmail = () => {
@@ -61,10 +67,23 @@ export default class FormCollect extends Component {
         .then(response => response.json())
         .then(data => {
           if (data === 'success') {
-            this.setState({ submitted: true });
+            this.setState({ submitted: true, input: false });
+          } else {
+            ReactGA.event({
+              category: 'FormSubmission',
+              action: 'user submitted form with an error',
+              storage: 'none'
+            });
+            this.setState({ submitted: false, input: false, error: true });
           }
         })
-        .catch(error => console.log(error));
+        .then(() => {
+          ReactGA.event({
+            category: 'FormSubmission',
+            action: 'user submitted form succesfully',
+            storage: 'none'
+          });
+        });
     } else {
       this.setState({
         label: 'Invalid email address, try again'
@@ -77,63 +96,19 @@ export default class FormCollect extends Component {
   };
 
   render() {
-    const { submitted, count, label } = this.state;
+    const { submitted, count, label, error, input } = this.state;
     return (
       <div className="ctr">
-        {submitted ? (
-          <div>
-            <p className="ctr__confirm">
-              Thanks! We will let you know if we get enough interest to launch,
-              in the meantime please share with friends.
-            </p>
-            <div className="sharing">
-              <a href="mailto:?&subject=Check out the Rocket Fleece!&body=Hey,%0A%0ACheck%20out%20this%20fleece%20I%20found%3A%0Alink%20goes%20here%0A">
-                <EmailIcon />
-              </a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//charlesscheuer.github.io/rocket-git/%23/fleece">
-                <FacebookIcon />
-              </a>
-              <a href="https://twitter.com/home?status=Check%20out%20this%20new%20non-profit%20fleece%20that%20is%20trying%20to%20restore%20Mongolian%20grasslands!%20link">
-                <TwitterIcon />
-              </a>
-            </div>
-            <button
-              type="button"
-              className="purchase"
-              onClick={this.goBackHandler}
-            >
-              Go back
-            </button>
-          </div>
-        ) : (
-          <div>
-            <h2>Join {count} others that are ready for liftoff!</h2>
-            <div className="ctr__email">
-              <form action="#" className="form">
-                <div className="form__group">
-                  <input
-                    type="email"
-                    onChange={this.onEmailChange}
-                    className="form__input"
-                    placeholder="Email address"
-                    id="email"
-                    required
-                  />
-                  <label htmlFor="email" className="form__label">
-                    {label}
-                  </label>
-                </div>
-              </form>
-            </div>
-            <button
-              type="submit"
-              className="purchase"
-              onClick={this.onSubmitEmail}
-            >
-              Request Invite
-            </button>
-          </div>
-        )}
+        {submitted ? <Success goBack={this.goBackHandler} /> : null}
+        {error ? <Error goBack={this.goBackHandler} /> : null}
+        {input ? (
+          <Input
+            counter={count}
+            label={label}
+            emailChange={this.onEmailChange}
+            submit={this.onSubmitEmail}
+          />
+        ) : null}
       </div>
     );
   }

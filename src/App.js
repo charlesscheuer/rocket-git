@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import ReactGA from 'react-ga';
 import './sass/main.scss';
 import Abovefold from './Abovefold';
 import NavMenu from './NavMenu';
@@ -8,12 +9,23 @@ import Footer from './Footer';
 import Ourstory from './Ourstory';
 import Fleece from './Fleece';
 
+ReactGA.initialize('UA-133410946-2', {
+  debug: true,
+  gaOptions: {
+    siteSpeedSampleRate: 100
+  }
+});
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       menu: false
     };
+  }
+
+  componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   menuToggleHandler = () => {
