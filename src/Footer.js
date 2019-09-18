@@ -29,17 +29,18 @@ export default class Footer extends Component {
 
   onSubmitEmail = () => {
     const { ctrSub, submitted } = this.state;
+    // / formerlly https://sleepy-lake-80658.herokuapp.com/register
+    // need to add google cloud platform here
     if (regexp.test(ctrSub) && ctrSub.length > 1) {
-      fetch('https://sleepy-lake-80658.herokuapp.com/register', {
+      fetch('http://localhost:5555/addEmail', {
         method: 'post',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
           email: ctrSub
         })
       })
-        .then(response => response.json())
-        .then(data => {
-          if (data === 'success') {
+        .then(response => {
+          if (response.ok) {
             this.setState({ submitted: true, input: false });
           } else {
             ReactGA.event({
