@@ -56,34 +56,24 @@ export default class FormCollect extends Component {
 
   onSubmitEmail = () => {
     const { ctrSub } = this.state;
+    const that = this;
     if (regexp.test(ctrSub) && ctrSub.length > 1) {
-      fetch('https://sleepy-lake-80658.herokuapp.com/register', {
-        method: 'post',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({
-          email: ctrSub
-        })
-      })
-        .then(response => response.json())
-        .then(data => {
-          if (data === 'success') {
-            this.setState({ submitted: true, input: false });
-          } else {
-            ReactGA.event({
-              category: 'FormSubmission',
-              action: 'user submitted form with an error',
-              storage: 'none'
-            });
-            this.setState({ submitted: false, input: false, error: true });
-          }
-        })
-        .then(() => {
-          ReactGA.event({
-            category: 'FormSubmission',
-            action: 'user submitted form succesfully',
-            storage: 'none'
-          });
-        });
+      fetch(
+        'https://us-central1-nu-sheet-api.cloudfunctions.net/app/appendEmailRocket',
+        {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            email: ctrSub
+          })
+        }
+      ).then(function(response) {
+        if (response.ok) {
+          that.setState({ submitted: true, input: false });
+        } else {
+          that.setState({ submitted: false, input: false, error: true });
+        }
+      });
     } else {
       this.setState({
         label: 'Invalid email address, try again'

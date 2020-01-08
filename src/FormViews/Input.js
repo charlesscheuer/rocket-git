@@ -4,7 +4,6 @@ export default function Input(props) {
   const { counter, label, submit, emailChange } = props;
   return (
     <div>
-      <h2>Join {counter} others that are ready for liftoff!</h2>
       <div className="ctr__email">
         <form action="#" className="form">
           <div className="form__group">

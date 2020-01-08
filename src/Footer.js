@@ -28,38 +28,25 @@ export default class Footer extends Component {
   };
 
   onSubmitEmail = () => {
-    const { ctrSub, submitted } = this.state;
-    // / formerlly https://sleepy-lake-80658.herokuapp.com/register
-    // need to add google cloud platform here
+    const { ctrSub } = this.state;
+    const that = this;
     if (regexp.test(ctrSub) && ctrSub.length > 1) {
-      fetch('http://localhost:5555/addEmail', {
-        method: 'post',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({
-          email: ctrSub
-        })
-      })
-        .then(response => {
-          if (response.ok) {
-            this.setState({ submitted: true, input: false });
-          } else {
-            ReactGA.event({
-              category: 'FormSubmission',
-              action: 'user submitted form with an error',
-              storage: 'none'
-            });
-            this.setState({ submitted: false, input: false, error: true });
-          }
-        })
-        .then(() => {
-          if (submitted === true) {
-            ReactGA.event({
-              category: 'FormSubmission',
-              action: 'user submitted form succesfully',
-              storage: 'none'
-            });
-          }
-        });
+      fetch(
+        'https://us-central1-nu-sheet-api.cloudfunctions.net/app/appendEmailRocket',
+        {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            email: ctrSub
+          })
+        }
+      ).then(function(response) {
+        if (response.ok) {
+          that.setState({ submitted: true, input: false });
+        } else {
+          that.setState({ submitted: false, input: false, error: true });
+        }
+      });
     } else {
       this.setState({
         label: 'Invalid email address, try again'
